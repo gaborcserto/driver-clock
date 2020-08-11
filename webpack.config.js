@@ -3,7 +3,6 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const nodeExternals = require('webpack-node-externals');
 const { SourceMapDevToolPlugin } = require("webpack");
 const CssNano = require('cssnano');
 
@@ -12,7 +11,6 @@ const dist = path.resolve(__dirname, 'dist');
 
 module.exports = {
 	target: 'node',
-	externals: [nodeExternals()],
 	devtool: 'eval-source-map',
 	mode: isDevelopment ? 'development' : 'production',
 	entry: ['babel-polyfill', './src/js/index.js', './src/scss/index.scss'],
