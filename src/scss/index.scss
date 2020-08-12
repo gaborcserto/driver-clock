@@ -424,7 +424,8 @@ i {
 		li {
 			position: absolute;
 			@extend %ab-center;
-			height: 408px;
+			font-weight: bold;
+			height: 400px;
 			width: 48px;
 			text-align: center;
 			text-indent: -5px;
@@ -468,7 +469,7 @@ i {
 	&-decor {
 		&:before {
 			@extend %pseudo;
-			top: 18px;
+			top: 21px;
 			left: 0;
 			right: 0;
 			margin: auto;
@@ -488,7 +489,7 @@ i {
 			left: 0;
 			right: 0;
 			margin: auto;
-			top: 19px;
+			top: 22px;
 			box-shadow: inset 0 2px 1px 0 rgba(0, 0, 0, 0.7);
 			background: linear-gradient(90deg,
 					#ccc 0%,
@@ -503,17 +504,35 @@ i {
 			width: 4px;
 			box-shadow: 0 -174px 0 0 #0A0B10,
 			1px -175px 0 0 #444;
-
+			&:nth-child(1),
 			&:nth-child(5),
 			&:nth-child(9),
 			&:nth-child(10),
-			&:nth-child(11) {
+			&:nth-child(11),
+			&:nth-child(15),
+			&:nth-child(19),
+			&:nth-child(20),
+			&:nth-child(21),
+			&:nth-child(25),
+			&:nth-child(29),
+			&:nth-child(30),
+			&:nth-child(31),
+			&:nth-child(35),
+			&:nth-child(39),
+			&:nth-child(40),
+			&:nth-child(41),
+			&:nth-child(45),
+			&:nth-child(49),
+			&:nth-child(50),
+			&:nth-child(51),
+			&:nth-child(55),
+			&:nth-child(59){
 				display: none;
 			}
 
 		}
 
-		@for $i from 1 through 14 {
+		@for $i from 1 through 60 {
 			.bezel-decor__min:nth-child(#{$i}) {
 				transform: rotateZ(calc(6deg * #{$i}));
 			}
